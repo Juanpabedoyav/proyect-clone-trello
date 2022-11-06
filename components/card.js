@@ -20,10 +20,10 @@ function Card({ text, id, setDragged }) {
         <div className="flex flex-col gap-4">
           <p className="font-medium">{text}</p>
         </div>
-        <Image src="/static/icons/edit.png" width={20} height={20} alt="edit" />
+        <Image src="/static/icons/edit.png" width={25} height={15} alt="edit" />
       </div>
       <div className="flex justify-between">
-        <img alt="avatar" />
+        <Image src= "/static/images/perfil.png" alt="avatar" width={30} height={30}/>
         <Image
           src="/static/icons/message.png"
           width={32}
