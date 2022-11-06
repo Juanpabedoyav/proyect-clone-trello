@@ -46,27 +46,33 @@ export default function Board() {
 
   const handleDrop = (event) => {
     event.preventDefault();
+    const list = event.currentTarget.dataset.list
     const allListClone = structuredClone(allList);
-    allListClone.inProgressList.push(dragged);
+    allListClone[list].push(dragged);
     setAllList(allListClone);
-    console.log(event);
   };
 
   return (
     <>
       <h1 className="text-2xl font-extrabold mb-4">Welcome to you Board</h1>
       <main className="flex gap-4">
-        <List name="TO DO" handleDrop={handleDrop}>
+        <List name="TO DO" 
+        handleDrop={handleDrop}
+        id="toDoList">
           {allList.toDoList.map((item) => (
             <Card setDragged={setDragged} {...item} key={item.id} />
           ))}
         </List>
-        <List name="In Progress" handleDrop={handleDrop}>
+        <List name="In Progress" 
+        handleDrop={handleDrop}
+        id='inProgressList'>
           {allList.inProgressList.map((item) => (
             <Card setDragged={setDragged} {...item} key={item.id} />
           ))}
         </List>{" "}
-        <List name="Done" handleDrop={handleDrop}>
+        <List name="Done" 
+        handleDrop={handleDrop}
+        id='doneList'>
           {allList.doneList.map((item) => (
             <Card setDragged={setDragged} {...item} key={item.id} />
           ))}
