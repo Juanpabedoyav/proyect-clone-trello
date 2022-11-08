@@ -4,23 +4,23 @@ import List from "../components/list";
 
 const toDoList = [
   {
-    text: "Iinicio de texto 1",
+    text: "Estudiar con colegas",
     id: "task-1",
   },
   {
-    text: "Iinicio de texto 2",
+    text: "Realizar Deploy",
     id: "task-2",
   },
 ];
 const inProgressList = [
   {
-    text: "Iinicio de texto",
+    text: "Actualizar información",
     id: "inprogressTask-1",
   },
 ];
 const doneList = [
   {
-    text: "Iinicio de texto",
+    text: "Solicitar cita médica",
     id: "DoneTask-1",
   },
 ];
